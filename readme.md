@@ -33,7 +33,7 @@ This setup has been tested with a USRP B210, a LimeSDR-USB and a LimeSDR-Mini.
 
 ## Software Setup
 
-Have tried to make this as easy as possible. Automatic setup is run in two parts.
+Have tried to make this as easy as possible. Automatic setup is run in two parts, with 'version locked' and tested third party software components!
 ```
 cd
 git clone https://github.com/kbarlee/srsranPi.git

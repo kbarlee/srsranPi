@@ -18,9 +18,7 @@ fi
 ## LimeSDR setup?
 if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR support" 8 78); then
     # SoapySDR
-    git clone https://github.com/pothosware/SoapySDR.git
     cd SoapySDR
-    git checkout tags/soapy-sdr-0.7.2
     mkdir build && cd build
     cmake ..
     make -j4
@@ -28,9 +26,7 @@ if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR supp
     ldconfig
     # LimeSuite
     apt install libusb-1.0-0-dev -y
-    git clone https://github.com/myriadrf/LimeSuite.git
     cd LimeSuite
-    git checkout tags/v20.01.0
     mkdir builddir && cd builddir
     cmake ../
     make -j4
@@ -43,9 +39,7 @@ fi
 
 ## srsRAN
 apt install libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev -y
-git clone https://github.com/srsRAN/srsRAN.git
 cd srsRAN
-git checkout tags/release_19_12
 mkdir build && cd build
 cmake ../
 make -j4
