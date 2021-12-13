@@ -28,6 +28,7 @@ if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR supp
     make -j4
     make install
     ldconfig
+    cd ../..
 
     # LimeSuite
     apt install libusb-1.0-0-dev -y
@@ -40,6 +41,7 @@ if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR supp
     cd ..
     cd udev-rules
     ./install.sh
+    cd ../..
 
 fi
 
