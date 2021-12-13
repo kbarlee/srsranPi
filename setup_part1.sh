@@ -5,13 +5,12 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-apt update & apt upgrade -y
-apt install cmake
+apt install cmake -y
 
 ## USRP setup?
 if (whiptail --title "Using a USRP?" --yesno "Hit yes to install USRP support" 8 78); then
     # UHD
-    apt install libuhd-dev libuhd3.15.0 uhd-host
+    apt install libuhd-dev libuhd3.15.0 uhd-host -y
     /usr/lib/uhd/utils/uhd_images_downloader.py
 fi
 
@@ -48,10 +47,9 @@ ldconfig
 # copy default srsRAN configs to /root
 ./srslte_install_configs.sh user
 
-
 ## Governor
 systemctl disable ondemand
-apt install linux-tools-raspi
+apt install linux-tools-raspi -y
 echo GOVERNOR="performance" >> /etc/default/cpufrequtils
 
 ## Overclock
