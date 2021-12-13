@@ -64,7 +64,7 @@ if (whiptail --title "Set CPU to performance mode?" --yesno "Hit yes to set gove
 fi
 
 ## Overclock
-if (whiptail --title "Do you want to overclock your Pi4 to 2GHz?" --yesno "Only do this if you have a heatsink. This script will edit boot configs for 'Ubuntu Pi' and 'Raspberry Pi OS'. If you are running a different distro you will need to run this manually." 8 78); then
+if (whiptail --title "Do you want to overclock your Pi4 to 2GHz?" --yesno "Only do this if you have a heatsink. This script will edit boot configs for 'Ubuntu Pi' and 'Raspberry Pi OS'. If you are running a different distro you will need to set this manually." 8 78); then
 
     . /etc/os-release
     if [ "$ID" = "ubuntu" ]; then
@@ -80,5 +80,6 @@ if (whiptail --title "Do you want to overclock your Pi4 to 2GHz?" --yesno "Only 
 
     fi
 fi
-
-echo "Setup part 1 complete! Reboot your Pi now."
+echo "*******************************************"
+echo " Setup part 1 complete! Reboot your Pi now"
+echo "*******************************************"
