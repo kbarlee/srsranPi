@@ -1,0 +1,9 @@
+[submodule "SoapySDR"]
+	path = SoapySDR
+	url = https://github.com/pothosware/SoapySDR.git
+[submodule "LimeSuite"]
+	path = LimeSuite
+	url = https://github.com/myriadrf/LimeSuite.git
+[submodule "srsRAN"]
+	path = srsRAN
+	url = https://github.com/srsRAN/srsRAN.git

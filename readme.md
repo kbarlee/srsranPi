@@ -36,7 +36,7 @@ This setup has been tested with a USRP B210, a LimeSDR-USB and a LimeSDR-Mini.
 Have tried to make this as easy as possible. Automatic setup is run in two parts.
 ```
 cd
-git clone git@github.com:kbarlee/srsranPi.git
+git clone https://github.com/kbarlee/srsranPi.git
 cd srsranPi
 
 
