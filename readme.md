@@ -12,14 +12,15 @@ The concept of an ultra low cost, low power and open source SDR LTE femtocell ha
 
 The setup instructions provided below have been tested with a *Raspberry Pi 4B /4GB rev 1.2* running either
 
-Ubuntu Server 20.04.3 LTS x64 [download link](https://cdimage.ubuntu.com/releases/20.04.3/release/ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz)
-Raspberry Pi OS x64 (Nov 2021) [download link](https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-11-08/)
+* Ubuntu Server 20.04.3 LTS x64 [download link](https://cdimage.ubuntu.com/releases/20.04.3/release/ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz)
+
+* Raspberry Pi OS x64 (Nov 2021) [download link](https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-11-08/)
 
 It has not been tested with the rev 1.1 board, boards with 2GB of RAM or alternative operating systems. You can visually identify your Pi4 hardware revision – [this doc from Cytron shows you how](https://tutorial.cytron.io/2020/02/22/how-to-check-if-your-raspberry-pi-4-model-b-is-rev1-2)
 
 This setup has been tested with a USRP B210, a LimeSDR-USB and a LimeSDR-Mini.
 
-!! Note
+### !! Note
 
 * When using the USRP B210, you can create a 2x2 MIMO cell with srsenb. It is also possible to run the srsepc core network on the Pi too.
 
