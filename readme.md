@@ -5,7 +5,7 @@ srsRAN is a 4G and 5G software radio suite. The 4G LTE systems includes a core n
 
 The concept of an ultra low cost, low power and open source SDR LTE femtocell has a lot of people excited!
 
-![image](img/sdrs.jpg)
+![image](_img/sdrs.jpg)
 
 
 ## Pi4 eNodeB Hardware Requirements
@@ -27,7 +27,7 @@ This setup has been tested with a USRP B210, a LimeSDR-USB and a LimeSDR-Mini.
 
 * Due to the power requirements of the SDRs, you must use an external power supply. This can be achieved with a USB ‘Y’ cable, such as this:
 
-![image](img/usb.png)
+![image](_img/usb.png)
 
 
 

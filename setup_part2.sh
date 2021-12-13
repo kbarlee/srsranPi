@@ -6,11 +6,11 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 ## Copy tweaked eNB config
-cp config/enb.conf /root/.config/srsenb/enb.conf
+cp _config/enb.conf /root/.config/srsenb/enb.conf
 
 ## Load system services
 apt install screen -y
-cp service/* /etc/systemd/system/
+cp _service/* /etc/systemd/system/
 systemctl daemon reload
 
 ## Run ePC?
