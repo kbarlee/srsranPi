@@ -1,0 +1,16 @@
+#/etc/systemd/system/srsepc.service 
+
+[Unit]
+Description=srsLTE ePC autostart service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStartPre=/bin/bash -c "/usr/local/bin/srsepc_if_masq.sh eth0"
+ExecStart=srsepc
+
+[Install]
+WantedBy=multi-user.target

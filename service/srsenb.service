@@ -1,0 +1,16 @@
+#/etc/systemd/system/srsenb.service 
+
+[Unit]
+Description=srsLTE eNB autostart service
+After=network.target
+
+[Service]
+Type=forking
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/screen -Sdm ENB srsenb
+ExecStop=/usr/bin/screen -X -S ENB stuff "^C"
+
+[Install]
+WantedBy=multi-user.target
