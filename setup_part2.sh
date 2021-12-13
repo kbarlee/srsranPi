@@ -19,13 +19,13 @@ if (whiptail --title "Run local core?" --yesno "Hit yes to set up a local core" 
     # EPC config
     if (whiptail --title "Edit the MME config" --yesno "Hit yes to edit the MME config. Make sure to set your MCC/MNC, and MME bind address)" 8 78); then
 
-        nano /root/.config/srsenb/epc.conf
+        nano /root/.config/srslte/epc.conf
 
     fi
     # HSS config
     if (whiptail --title "Edit the HSS config" --yesno "Hit yes to edit the HSS config. Enter your SIM details (following the included example)" 8 78); then
 
-        nano /root/.config/srsenb/user_db.csv
+        nano /root/.config/srslte/user_db.csv
 
     fi
     systemctl enable srsepc
@@ -34,8 +34,8 @@ if (whiptail --title "Run local core?" --yesno "Hit yes to set up a local core" 
 
     echo "*******************************************"
     echo " Core config files can be found at:"
-    echo "   /root/.config/srsenb/epc.conf"
-    echo "   /root/.config/srsenb/user_db.csv"
+    echo "   /root/.config/srslte/epc.conf"
+    echo "   /root/.config/srslte/user_db.csv"
     echo " "
     echo " To stop/restart srsepc service, run:"
     echo "   sudo systemctl restart srsepc"
@@ -47,8 +47,8 @@ fi
 ## eNB config
 if (whiptail --title "Edit the eNB config" --yesno "Hit yes to edit the eNB config. Make sure to set your MCC/MNC, MME/GTP/S1AP bind addresses, and DL EARFCN (set to a channel you are legally permitted to broadcast on)" 8 78); then
 
-    nano /root/.config/srsenb/enb.conf
-    
+    nano /root/.config/srslte/enb.conf
+
 fi
 systemctl enable srsenb
 systemctl restart srsenb
@@ -56,7 +56,7 @@ systemctl status srsenb
 
 echo "*******************************************"
 echo " eNB config file can be found at:"
-echo "   /root/.config/srsenb/enb.conf"
+echo "   /root/.config/srslte/enb.conf"
 echo " "
 echo " To stop/restart srsenb service, run:"
 echo "   sudo systemctl restart srsenb"
