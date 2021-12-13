@@ -23,7 +23,7 @@ if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR supp
 
     # SoapySDR
     cd SoapySDR
-    mkdir build && cd build
+    rm -rf build && mkdir build && cd build
     cmake ..
     make -j4
     make install
@@ -32,7 +32,7 @@ if (whiptail --title "Using a LimeSDR?" --yesno "Hit yes to install LimeSDR supp
     # LimeSuite
     apt install libusb-1.0-0-dev -y
     cd LimeSuite
-    mkdir builddir && cd builddir
+    rm -rf builddir && mkdir builddir && cd builddir
     cmake ../
     make -j4
     make install
@@ -46,7 +46,7 @@ fi
 ## srsRAN
 apt install libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev -y
 cd srsRAN
-mkdir build && cd build
+rm -rf build && mkdir build && cd build
 cmake ../
 make -j4
 make install
