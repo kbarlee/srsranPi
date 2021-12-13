@@ -40,7 +40,7 @@ git clone https://github.com/kbarlee/srsranPi.git
 cd srsranPi
 
 sudo apt update
-sudo apt upgrade -y
+sudo apt upgrade -yy
 
 sudo ./setup_part1.sh
 
